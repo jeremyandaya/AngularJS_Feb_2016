@@ -20,12 +20,10 @@
 			<input type="radio" name="color" ng-model="mainCtrl.colorSelected" ng-value="mainCtrl.ngvalueYellow" />Yellow&nbsp;&nbsp;&nbsp; 
 			<input type="radio" name="color" ng-model="mainCtrl.colorSelected" ng-value="mainCtrl.ngvalueOrange" />Orange&nbsp;&nbsp;&nbsp; 
 			<input type="radio" name="color" ng-model="mainCtrl.colorSelected" ng-value="mainCtrl.ngvalueNone" />None
-			
 
 			<br />
 			<br />
 			<br />
-			
 
 			<div class="divOne" ng-class="mainCtrl.colorSelected.divOneBgColorNgClass">
 				<h3>Div One</h3>
@@ -51,7 +49,7 @@
 				</p>
 			</div>
 			<div class="clear"></div>
-		</div>
+		</div> <!-- end containerOne -->
 
 		<br/>
 		<br/>
@@ -59,39 +57,20 @@
 		<br/>
 		<h1>Folder Display</h1>
 		<br/>
-		
 		<div class="folder_wrapper_left">
 			<h2>My Files</h2>
 			<input type="checkbox" ng-model="mainCtrl.showFiles" />Show files<br />
-			<!-- <p><strong>Folder 1</strong></p>
-			<ul>
-				<li ng-if="mainCtrl.showFiles">Some file 1</li>
-				<ul ng-repeat="file in mainCtrl.myFiles">
-					<li ng-bind="file.fileName"></li>
-				</ul>
-			</ul>
-			<p><strong>Folder 2</strong></p>
-			<ul>
-				<li ng-if="mainCtrl.showFiles">Some file 2</li>
-			</ul>
-			<p><strong>Folder 3</strong></p>
-			<ul>
-				<li ng-if="mainCtrl.showFiles">Some file 3</li>
-			</ul> -->
-
-			<div> 
-
+			<div>
+				
 		  		<div ng-repeat="folder in mainCtrl.folderArray">
 					<ul ng-bind="folder.name"></ul>
 						<li ng-repeat="file in mainCtrl.folderArray[$index].files" ng-show="mainCtrl.showFiles" class="files">
 							<label ng-bind="file.name"></label>
 						</li>
-					</ul>
 				</div>
-				
-			</div>
 
-		</div>
+			</div>
+		</div> <!-- end folder_wrapper_left -->
 		<div class="folder_wrapper_right">
 			<h2>Add Files</h2>
 			<br/>
@@ -103,33 +82,8 @@
 			<input type="radio" name="folder" ng-model="mainCtrl.folderIndex" ng-value=2 />Trip<br />
 			<br />
 		</div>
-
-		<!-- <input type="checkbox" ng-model="mainCtrl.showFiles">Show Files</input> -->
   		<div>
-	  		<!-- <div style="float:left; width:400px"> 
-
-		  		<div class="folderItem" ng-repeat="folder in mainCtrl.interArray">
-					<label ng-bind="folder.name"></label>
-					<div class="fileItem" ng-repeat="file in mainCtrl.interArray[$index].files" ng-show="mainCtrl.showFiles">
-						<label ng-bind="file.name"></label>
-					</div>
-				</div>
-				
-			</div> -->
-			<!-- <div style="float:left; width:400px">
-				<button ng-click="mainCtrl.addNewFile()">Add</button>
-				<input type="text" ng-model="mainCtrl.newFile">
-				<label>
-  					<input type="radio" name="folder" ng-model="mainCtrl.folderIndex" ng-value=0 checked/>Personal
-		  		</label>
-		  		<label>
-		  			<input type="radio" name="folder" ng-model="mainCtrl.folderIndex" ng-value=1 />Work
-		  		</label>
-		  		<label>
-			  		<input type="radio" name="folder" ng-model="mainCtrl.folderIndex" ng-value=2 />Trip
-			  	</label>
-			</div> -->
-			<!-- <div style="clear:both"></div> -->
+	  		
 		</div>
 		
 
