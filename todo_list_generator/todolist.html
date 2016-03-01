@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List Generator</title>
+</head>
+<body>
+	<label>To-Do Name:</label> 
+	<input type="text" ng-model="mainCtrl.userText"><br/>
+	<label>To-Do Description:</label> 
+	<input type="text" ng-model="mainCtrl.userText"><br/>
+	<label>Priority:</label>
+	<input type="radio" name="priority" ng-model="mainCtrl.prioritySelected" ng-value="mainCtrl.ngvaluePriorityHigh" />High
+	<input type="radio" name="priority" ng-model="mainCtrl.prioritySelected" ng-value="mainCtrl.ngvaluePriorityMedium" />Medium
+	<input type="radio" name="priority" ng-model="mainCtrl.prioritySelected" ng-value="mainCtrl.ngvaluePriorityLow" />Low
+	<br/>
+	<button ng-click="mainCtrl.onButtonClick()">Add Todo</button>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Custom Services</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="services.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+<body ng-app="MyApp">
+	<div ng-controller="MainController as mainCtrl" >
+		<h1 ng-bind="mainCtrl.greeting"></h1>
+		<h3 ng-bind="mainCtrl.count"></h3>
+
+		<button ng-click="mainCtrl.addCar()">Add Car</button>
+		<input type="radio" ng>Column 1
+		<div ng-repeat="car in mainCtrl.myCars">
+			<label>Make: </label><span ng-bind="car.make"></span> 
+		</div>
+
+
+
+		<h3>Car Info</h3>
+		<div>
+			<label>Name: </label><span ng-bind="mainCtrl.myNewCar1.name"></span><br />
+			<label>Make: </label><span ng-bind="mainCtrl.myNewCar1.make"></span>
+		</div>
+		Calc Sum: <span ng-bind="mainCtrl.myCalc"></span>
+
+
+	</div>
+
+	<!-- <div ng-controller="SecondController as secondCtrl" >
+		<h1 ng-bind="secondCtrl.greeting"></h1>
+		<h3 ng-bind="secondCtrl.count"></h3> -->
+
+		<!-- <button ng-click="secondCtrl.addCar()">Add Car</button> -->
+		<!-- <div ng-repeat="car in secondCtrl.secondCars">
+			<label>Make: </label><span ng-bind="car.make"></span> 
+		</div>
+	</div> -->
+
+	
+	
+
+</body>
+</html>

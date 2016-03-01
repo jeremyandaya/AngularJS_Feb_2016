@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Grade Calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="services.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-app="StudentGradeCalcApp">
+	<div ng-controller="MainController as ctrl">
+
+		<label>Student: </label>
+		<input type="text" ng-model="ctrl.gradebook.student" /> 
+		<span ng-bind="ctrl.gradebook.student"></span><br />
+
+		<label>Assignment: </label>
+		<input type="text" ng-model="ctrl.gradebook.assignment" /> 
+		<span ng-bind="ctrl.gradebook.assignment"></span><br />
+
+		<label>Grade: </label>
+		<input type="text" ng-model="ctrl.gradebook.grade" /> 
+		<span ng-bind="ctrl.gradebook.grade"></span><br />
+
+		<button ng-click="ctrl.gradebook.addToAssignments(ctrl.gradebook.assignment, ctrl.gradebook.grade)">ADD</button>
+
+		<br />
+		<br />
+
+		<div class="gradeList">
+			<h1> Assignments</h1>
+			<ul ng-repeat="item in ctrl.gradebook.assignments">
+				<li>Assignment #{{$index + 1}}</li>
+				<ul>
+					<li ng-bind="item.assignment"> </li>
+					<li ng-bind="item.grade"> </li>
+				</ul>
+			</ul>
+		</div>
+		<div class="gradeAverage">
+			<h1> Placeholder</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ea similique exercitationem quibusdam voluptate! Repellat, nobis! Reprehenderit, recusandae veritatis molestias temporibus consectetur a sed, explicabo beatae velit suscipit provident, tempore!
+		</div>
+
+	</div>
+
+</body>
+</html>

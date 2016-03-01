@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="PlaylistApp">
+<head>
+	<title>Playlist Creator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="MainController as mainCtrl">
+	<div class="container">
+		<h1>Playlist Creator</h1>
+		Name: <input type="text" ng-model="ctrl.name" /> <br />
+		Age: <input type="text" ng-model="ctrl.age" />
+
+		<h3>Genre</h3> 
+		<input type="radio" name="genre" ng-model="ctrl.genreSelected" ng-value="mainCtrl.rock" />Rock<br />
+		<input type="radio" name="genre" ng-model="ctrl.genreSelected" ng-value="mainCtrl.rap" />Rap<br />
+		<input type="radio" name="genre" ng-model="ctrl.genreSelected" ng-value="mainCtrl.pop" />Pop<br />
+		
+	</div>
+
+</body>
+</html>

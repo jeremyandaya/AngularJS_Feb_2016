@@ -1,0 +1,144 @@
+.cssRed {
+	color: #ff0000; /*50%*/
+	background-color: #ffe6e6; /*95%*/
+}
+
+.cssGreen {
+	color: #008000; /*25%*/
+	background-color: #e6ffe6; /*95%*/
+}
+
+.cssBlue {
+	color: #0000ff; /*50%*/
+	background-color: #e6e6ff; /*95%*/
+}
+
+.cssYellow {
+	color: #666600; /*20%*/
+	background-color: #ffffcc; /*90%*/
+}
+
+.cssOrange {
+	color: #b37400; /*35%*/
+	background-color: #ffe4b3; /*85%*/
+}
+
+/*DIV ONE*/
+.divOneBgColorCssRed {
+	background-color: #ff8080; /*75%*/
+}
+
+.divOneBgColorCssGreen {
+	background-color: #00e600; /*45%*/
+}
+
+.divOneBgColorCssBlue {
+	background-color: #8080ff; /*75%*/
+}
+
+.divOneBgColorCssYellow {
+	background-color: #ffff1a; /*55%*/
+}
+
+.divOneBgColorCssOrange {
+	background-color: #ffa500; /*50%*/
+}
+
+/*DIV TWO*/
+.divTwoBgColorCssRed {
+	background-color: #ffcccc; /*90%*/
+}
+
+.divTwoBgColorCssGreen {
+	background-color: #99ff99; /*80%*/
+}
+
+.divTwoBgColorCssBlue {
+	background-color: #b3b3ff; /*85%*/
+}
+
+.divTwoBgColorCssYellow {
+	background-color: #ffff99; /*80%*/
+}
+
+.divTwoBgColorCssOrange {
+	background-color: #ffdb99; /*80%*/
+}
+
+
+.mainDiv {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+.containerOne {
+	width: 900px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.divOne {
+	float: left;
+	border: 1px solid black;
+	width: 400px;
+	padding: 10px;
+	border-radius: 10px;
+
+}
+
+.divTwo {
+	float: right;
+	border: 1px solid black;
+	width: 400px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.clear {
+	clear: both;
+}
+
+.folder_wrapper_left {
+	float: left;
+	border: 1px solid black;
+	width: 400px;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: left;
+
+}
+
+.folder_wrapper_right {
+	float: right;
+	border: 1px solid black;
+	width: 400px;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: left;
+
+}
+
+.radioDiv {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+h1 {
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.files {
+	text-indent: 80px;
+}
+
+
+
+
+
+

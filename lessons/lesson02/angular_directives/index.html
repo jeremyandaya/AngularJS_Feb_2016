@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Directives</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+
+	<style type="text/css">
+		.red {
+			color: red;
+		}
+
+		.green {
+			color: green;
+		}
+
+		.blue {
+			color: blue;
+		}
+
+	</style>
+</head>
+<body ng-app="MyApp">
+	<div ng-controller="MainController as mainCtrl">
+
+		<h1 ng-bind="mainCtrl.myGreeting"></h1> <!-- nothing inside ng-bind! -->
+		<h5>{{mainCtrl.myGreeting}}</h5>
+
+		<h3>Simple ng-repeat</h3>
+		<div ng-repeat="item in mainCtrl.simpleArray">
+			<h4 ng-bind="item"></h4><div ng-bind="$index"></div>
+		</div>
+
+		<h3>Intermediate ng-repeat</h3>
+		<div ng-repeat="person in mainCtrl.interArray">
+			<h2 ng-bind="person.name"></h2>
+			<hr>
+		</div>
+
+		<h3>Object ng-repeat</h3>
+		<div ng-repeat="(key, value) in mainCtrl.states">
+			<h3>Abbr: <span ng-bind="key"></span></h3>
+			<h3>Name: <span ng-bind="value"></span></h3>
+			<hr>
+		</div>
+
+		<h3>Text ng-model</h3>
+		<h1 ng-bind="mainCtrl.username"></h1>
+		<input type="text" ng-model="mainCtrl.username" />
+
+		<h3>Checkbox ng-model</h3>
+		<h1 ng-bind="mainCtrl.select"></h1>
+		<input type="checkbox" ng-model="mainCtrl.select" />Select
+
+		<h3>Radio ng-model</h3>
+		<h1 ng-bind="mainCtrl.animalSelected.name"></h1>
+		<input type="radio" name="animal" ng-value="mainCtrl.myLion" ng-model="mainCtrl.animalSelected" />Lion
+		<input type="radio" name="animal" ng-value="mainCtrl.myTiger" ng-model="mainCtrl.animalSelected" />Tiger
+		<input type="radio" name="animal" ng-value="mainCtrl.myPuma" ng-model="mainCtrl.animalSelected" />Puma
+
+		<br/>
+		<br/>
+		<h3>Checkbox ng-show and ng-hide</h3>
+		<input type="checkbox" ng-model="mainCtrl.shouldShow" />
+		<div ng-show="mainCtrl.shouldShow" style="color:red">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>Button ng-click</h3>
+		<button ng-click="mainCtrl.onButtonClick()">Click Me!</button>
+		<br/>
+		<br/>
+		<br/>
+		<h3>ng-class string</h3>
+		<input type="text" ng-model="mainCtrl.userText">
+		<div ng-class="mainCtrl.userText">Check</div>
+		<br/>
+		<br/>
+		<br/>
+		<h3>ng-class object</h3>
+		<input type="checkbox" ng-model="mainCtrl.classObject.red">Red
+		<input type="checkbox" ng-model="mainCtrl.classObject.green">Green
+		<input type="checkbox" ng-model="mainCtrl.classObject.blue">Blue
+		<div ng-class="mainCtrl.classObject">Check</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+
+	</div>
+
+</body>
+</html>
+
+
+<!-- M (JS) <=> C (JS) <=>$scope<=> V (HTML) -->
